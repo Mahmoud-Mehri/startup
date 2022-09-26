@@ -1,0 +1,76 @@
+.task-container {
+  margin: 4px;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: silver;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: rgb(228, 237, 241);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 1px rgb(230, 227, 227);
+}
+
+.task-title {
+  display: flex;
+}
+
+.task-tick {
+  font-size: 16px;
+  color: rgb(9, 31, 129);
+  padding: 8px 3px 8px 4px;
+  flex: left;
+}
+
+.task-title-text {
+  font-size: 16px;
+  padding: 8px;
+  padding-left: 2px;
+  display: flex;
+  flex: left;
+}
+
+.btn-container {
+  display: flex;
+  float: right;
+  align-items: center;
+}
+
+.btn-done {
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+  float: right;
+}
+
+.btn-done:hover {
+  color: rgb(27, 175, 64);
+  font-size: 22px;
+}
+
+.btn-undone {
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+  float: right;
+}
+
+.btn-undone:hover {
+  color: rgb(228, 118, 127);
+  font-size: 22px;
+}
+
+.btn-delete {
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  color: rgb(223, 69, 69);
+  font-size: 22px;
+}
+
+/* .btn-delete:checked {
+  font-size: 20px;
+} */

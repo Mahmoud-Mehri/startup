@@ -1,0 +1,13 @@
+.title {
+  font-size: 20px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: silver;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.fact {
+  font-size: 18px;
+  font-weight: bold;
+}

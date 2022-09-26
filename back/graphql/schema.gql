@@ -1,0 +1,101 @@
+type Phase {
+  id: ID
+  title: String
+  isCompleted: Boolean
+  tasks: [Task]!
+}
+
+type PhaseArray {
+  phases: [Phase]!
+}
+
+type Task {
+  id: ID
+  title: String
+  isDone: Boolean
+  phaseId: ID
+}
+
+type StringResult {
+  message: String!
+}
+
+# input PhaseInput {
+#   title: String
+# }
+
+interface BaseErrorType {
+  message: String!
+}
+
+type NotFoundError implements BaseErrorType {
+  message: String!
+}
+
+type InvalidOrderError implements BaseErrorType {
+  message: String!
+}
+
+type AlreadyDoneError implements BaseErrorType {
+  message: String!
+}
+
+type IsNotDoneError implements BaseErrorType {
+  message: String!
+}
+
+type ExceptionError implements BaseErrorType {
+  message: String!
+}
+
+type UnknownError implements BaseErrorType {
+  message: String!
+}
+
+input CreateTaskInput {
+  title: String!
+  phaseId: ID!
+}
+
+input TaskInput {
+  id: ID!
+  phaseId: ID!
+}
+
+# union ErrorUnion =
+#     NotFoundError
+#   | AlreadyDoneError
+#   | ExceptionError
+#   | UnknownError
+
+union PhaseResult = Phase | NotFoundError | ExceptionError | UnknownError
+union AllPhasesResult = PhaseArray | ExceptionError | UnknownError
+union TaskResult = Task | NotFoundError | ExceptionError | UnknownError
+union DoneTaskResult =
+    Phase
+  | NotFoundError
+  | AlreadyDoneError
+  | InvalidOrderError
+  | ExceptionError
+  | UnknownError
+
+union UndoneTaskResult =
+    Phase
+  | NotFoundError
+  | IsNotDoneError
+  | InvalidOrderError
+  | ExceptionError
+  | UnknownError
+
+type Query {
+  getPhase(id: ID): PhaseResult
+  getAllPhases: AllPhasesResult
+  getTask(phaseId: ID, taskId: ID): TaskResult
+}
+
+type Mutation {
+  createTask(input: CreateTaskInput): PhaseResult
+  makeTaskDone(input: TaskInput): DoneTaskResult
+  makeTaskUndone(input: TaskInput): UndoneTaskResult
+  deleteTask(input: TaskInput): PhaseResult
+}

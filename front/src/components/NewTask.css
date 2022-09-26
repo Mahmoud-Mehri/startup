@@ -1,0 +1,21 @@
+.new-task-form {
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: gainsboro;
+  padding: 8px;
+  margin: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-submit {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  color: rgb(223, 69, 69);
+  font-size: 22px;
+}

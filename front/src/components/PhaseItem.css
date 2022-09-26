@@ -1,0 +1,54 @@
+.phase-container {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: gainsboro;
+  padding: 8px;
+  padding-top: 0px;
+  margin-bottom: 8px;
+}
+
+.phase-input-container {
+  margin: 3px;
+  margin-bottom: 7px;
+  padding-bottom: 3px;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+}
+
+.phase-title-container {
+  margin: 3px;
+  /* margin-bottom: 7px; */
+  /* border-bottom-width: 1px;
+  border-bottom-style: dotted; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.phase-title {
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+  max-height: 40px;
+  padding: 4px;
+  flex: left;
+  display: flex;
+}
+
+.ico-completed {
+  display: flex;
+  margin-right: 2px;
+  flex: right;
+  padding-left: 4px;
+  color: rgb(27, 175, 64);
+}
+
+.btn-new {
+  font-size: 22px;
+  cursor: pointer;
+  flex: right;
+}
+
+.btn-new:hover {
+  font-size: 24px;
+}
