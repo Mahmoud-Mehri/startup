@@ -1,6 +1,6 @@
 # startup
 
-A simple test project with Node.JS and React.JS
+A simple project with Node.JS and React.JS using GraphQL
 
 Back:
 
